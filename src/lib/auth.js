@@ -14,6 +14,6 @@ export const auth = betterAuth({
     },
     trustedOrigins: [
     "http://localhost:3000",
-    "https://skill-sphere-virid.vercel.app/"
+    "https://skill-sphere-virid.vercel.app"
   ],
 });
