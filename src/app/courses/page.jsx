@@ -1,14 +1,15 @@
-import React from 'react'
+import React from 'react';
+import CourseCard from '@/components/homepage/CourseCard'
 
-const CoursesPage = () => {
-  // const res = await fetch('https://skill-sphere-virid.vercel.app/data.json')
-  // const courses = await res.json();
+const CoursesPage = async() => {
+  const res = await fetch('https://skill-sphere-virid.vercel.app/data.json')
+  const courses = await res.json();
   return (
     <div>
       <h2 className="text-xl font-bold text-center">All Courses</h2>
       
       <div>
-        course card
+        {courses.map((course) => <CourseCard key={course.id} course={course}/>)}
       </div>
     </div>
   )

@@ -17,7 +17,7 @@ const RegisterPage = () => {
       callbackURL: '/login'
     })
     if(error){
-      alert("Error register")
+      alert(error.message)
     }
     if(data){
       alert("Successfully Register")
