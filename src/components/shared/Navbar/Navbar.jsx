@@ -1,7 +1,16 @@
+"use client";
 import React from "react";
 import Link from "next/link";
+import { authClient } from "@/lib/auth-client";
+import Image from "next/image";
 
 const Navbar = () => {
+    const userData = authClient.useSession();
+    const user = userData.data?.user;
+
+    const handleLogout = async () => {
+        await authClient.signOut();
+    };
     return (
         <div className="flex py-2 justify-between bg-base-100 shadow-sm">
             {/*dropdown menu*/}
@@ -41,10 +50,36 @@ const Navbar = () => {
                         <li>
                             <Link href="/profile">Profile</Link>
                         </li>
-                        <div className="flex gap-2">
-                            <Link href="/login" className="btn">Login</Link>
-                            <Link href="/register" className="btn">Register</Link>
-                        </div>
+
+                        {!user && (
+                            <ul className="flex gap-2 pr-4">
+                                <li>
+                                    <Link href={"/login"} className="btn">
+                                        Login
+                                    </Link>
+                                </li>
+                                <li>
+                                    <Link href={"/register"} className="btn">
+                                        Register
+                                    </Link>
+                                </li>
+                            </ul>
+                        )}
+                        {user && (
+                            <div className="flex gap-2">
+                                <div className="avatar avatar-placeholder">
+                                    <div className="bg-neutral text-neutral-content w-8 rounded-full">
+                                        <p>Profile</p>
+                                    </div>
+                                </div>
+                                <button
+                                    onClick={handleLogout}
+                                    className="btn btn-error text-sm"
+                                >
+                                    Logout
+                                </button>
+                            </div>
+                        )}
                     </ul>
                 </div>
             </div>
@@ -76,9 +111,36 @@ const Navbar = () => {
                     placeholder="Search"
                     className="input input-bordered w-24 md:w-auto"
                 />
-                <div className="hidden md:flex gap-2 md:pr-4">
-                    <button className="btn">Login</button>
-                    <button className="btn">Register</button>
+                <div>
+                    {!user && (
+                        <ul className="hidden md:flex gap-2 md:pr-4">
+                            <li>
+                                <Link href={"/login"} className="btn">
+                                    Login
+                                </Link>
+                            </li>
+                            <li>
+                                <Link href={"/register"} className="btn">
+                                    Register
+                                </Link>
+                            </li>
+                        </ul>
+                    )}
+                    {user && (
+                        <div className="hidden md:flex gap-3">
+                            <div className="avatar avatar-placeholder">
+                                <div className="bg-neutral text-neutral-content w-8 rounded-full">
+                                    <Image src={user?.image} alt="User"/>
+                                </div>
+                            </div>
+                            <button
+                                onClick={handleLogout}
+                                className="btn btn-error text-sm"
+                            >
+                                Logout
+                            </button>
+                        </div>
+                    )}
                 </div>
             </div>
         </div>

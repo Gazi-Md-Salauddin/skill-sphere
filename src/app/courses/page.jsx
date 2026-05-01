@@ -5,10 +5,10 @@ const CoursesPage = async() => {
   const res = await fetch('https://skill-sphere-virid.vercel.app/data.json')
   const courses = await res.json();
   return (
-    <div>
-      <h2 className="text-xl font-bold text-center">All Courses</h2>
+    <div className="my-6">
+      <h2 className="text-xl font-bold text-center mb-6">All Courses</h2>
       
-      <div>
+      <div className="grid grid-cols-1 md:grid-cols-3 gap-3">
         {courses.map((course) => <CourseCard key={course.id} course={course}/>)}
       </div>
     </div>
