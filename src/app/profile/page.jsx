@@ -1,24 +1,40 @@
+"use client"
 import React from "react";
+import UpdateUserModal from '@/components/UpdateUserModal';
+import { authClient } from "@/lib/auth-client";
 
-const page = () => {
+const ProfilePage = () => {
+  const userData = authClient.useSession();
+    const user = userData?.data?.user;
+    
+
+    if (!user) {
+        return (
+            <div className="text-center p-10">
+                Loading profile...
+            </div>
+        );
+    }
+    
     return (
         <div className="card bg-base-100 w-full shadow-sm">
             <figure className="px-10 pt-10">
                 <img
-                    src="https://img.daisyui.com/images/stock/photo-1606107557195-0e29a4b5b4aa.webp"
-                    alt=""
+                    src={user.image}
+                    alt="User"
                     className="rounded-full"
                 />
             </figure>
             <div className="card-body items-center text-center">
-                <h2 className="card-title">Title</h2>
+                <h2 className="card-title">{user.name}</h2>
+                <p>{user.email}</p>
 
                 <div className="card-actions">
-                    <button className="btn btn-primary">Update Profile</button>
+                    <UpdateUserModal/>
                 </div>
             </div>
         </div>
     );
 };
 
-export default page;
+export default ProfilePage;

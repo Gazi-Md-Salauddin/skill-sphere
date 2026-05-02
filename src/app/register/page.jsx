@@ -48,9 +48,14 @@ const RegisterPage = () => {
                 placeholder="Enter your Email"
             />
 
-                <label className="label">Image URL</label>
-                <input className="input" isrequired name="image" type="text" placeholder="Image URL" />
-                
+            <label className="label">Image URL</label>
+            <input
+                className="input"
+                required
+                name="image"
+                type="text"
+                placeholder="Image URL"
+            />
 
             <label className="label">Password</label>
             <input

@@ -130,7 +130,9 @@ const Navbar = () => {
                         <div className="hidden md:flex gap-3">
                             <div className="avatar avatar-placeholder">
                                 <div className="bg-neutral text-neutral-content w-8 rounded-full">
-                                    <Image src={user?.image} alt="User" />
+                                    <Image src={user?.image || "/default-user.png"} alt="User" width={20} height={20} 
+                                    referrerPolicy="no-referrer"
+                                    />
                                 </div>
                             </div>
                             <button
