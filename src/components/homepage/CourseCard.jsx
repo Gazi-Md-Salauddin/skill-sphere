@@ -4,14 +4,14 @@ import Link from "next/link";
 
 const CourseCard = ({ course }) => {
     return (
-        <div className="card bg-base-100 w-full shadow-sm">
+        <div className="card bg-base-100 w-full shadow-sm mx-auto px-4">
             <figure>
                 <img src={course.image} alt={course.title} />
             </figure>
             <div className="card-body">
                 <h2 className="card-title">
                     {course.title}
-                    <div className="badge badge-secondary">NEW</div>
+                    <div className="badge bg-purple-500 text-white">{course.category}</div>
                 </h2>
                 <p className="flex gap-2 items-center">
                     {course.rating}

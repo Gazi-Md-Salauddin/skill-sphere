@@ -48,7 +48,7 @@ const Navbar = () => {
                             <Link href="/courses">Courses</Link>
                         </li>
                         <li>
-                            <Link href="/profile">Profile</Link>
+                            <Link href="/profile">My Profile</Link>
                         </li>
 
                         {!user && (
@@ -130,7 +130,7 @@ const Navbar = () => {
                         <div className="hidden md:flex gap-3">
                             <div className="avatar avatar-placeholder">
                                 <div className="bg-neutral text-neutral-content w-8 rounded-full">
-                                    <Image src={user?.image} alt="User"/>
+                                    <Image src={user?.image} alt="User" />
                                 </div>
                             </div>
                             <button
