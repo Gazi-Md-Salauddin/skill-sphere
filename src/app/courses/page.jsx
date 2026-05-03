@@ -1,5 +1,5 @@
 import React from "react";
-import CourseCard from "@/components/homepage/CourseCard";
+import CourseCard from "@/components/homepage/ui/CourseCard";
 import SearchField from "@/components/SearchField";
 import { getCourses } from "@/lib/course";
 import NotFoundCourse from '@/components/NotFoundCourse'

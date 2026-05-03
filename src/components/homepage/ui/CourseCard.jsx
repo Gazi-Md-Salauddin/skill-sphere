@@ -11,7 +11,9 @@ const CourseCard = ({ course }) => {
             <div className="card-body">
                 <h2 className="card-title">
                     {course.title}
-                    <div className="badge bg-purple-500 text-white">{course.category}</div>
+                    <div className="badge bg-purple-500 text-white">
+                        {course.category}
+                    </div>
                 </h2>
                 <p className="flex gap-2 items-center">
                     {course.rating}

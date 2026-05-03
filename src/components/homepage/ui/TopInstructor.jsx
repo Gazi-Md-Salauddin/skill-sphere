@@ -27,7 +27,7 @@ const instructors = [
 
 const TopInstructor = () => {
     return (
-        <div className="px-4 mt-8">
+        <div className="px-4 mt-10">
             <div>
                 <h2 className="text-2xl font-bold">Top Instructors</h2>
             </div>

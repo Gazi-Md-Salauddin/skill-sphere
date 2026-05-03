@@ -2,7 +2,7 @@ import React from "react";
 
 const LearningTips = () => {
     return (
-        <div className="mt-6">
+        <div className="my-6">
             <div className="px-4">
                 <h2 className="text-2xl font-bold">Learning Tips</h2>
             </div>
