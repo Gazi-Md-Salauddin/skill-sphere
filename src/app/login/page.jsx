@@ -18,10 +18,11 @@ const LoginPage = () => {
             callbackURL: '/'
         });
         if (error) {
-            alert("Error Login:");
+          toast.error(error.message)
+            // alert("Error Login");
         }
         if (data) {
-          toast('Login Successfully')
+          toast.success("Login Successfully")
             // alert("Login Successfully");
         }
     };

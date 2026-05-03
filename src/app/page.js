@@ -1,14 +1,14 @@
 import Image from "next/image";
 import Banner from '@/components/shared/Banner/Banner';
 import TopCourses from '@/components/homepage/TopCourses';
-import { ToastContainer, toast } from 'react-toastify';
+
 
 export default function Home() {
   return (
     <div className="max-w-4xl mx-auto">
       <Banner/>
       <TopCourses/>
-      <ToastContainer />
+      
     </div>
   );
 }
