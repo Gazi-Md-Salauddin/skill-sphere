@@ -4,7 +4,7 @@ import Link from "next/link";
 
 const CourseCard = ({ course }) => {
     return (
-        <div className="card bg-base-100 w-full shadow-sm mx-auto px-4">
+        <div className="card bg-base-100 w-full shadow-sm mx-auto">
             <figure>
                 <img src={course.image} alt={course.title} />
             </figure>

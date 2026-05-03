@@ -2,11 +2,11 @@ import React from "react";
 
 const LearningTips = () => {
     return (
-        <div className="px-4 mt-4">
-            <div>
+        <div className="mt-6">
+            <div className="px-4">
                 <h2 className="text-2xl font-bold">Learning Tips</h2>
             </div>
-            <div className="grid grid-cols-1 md:grid-cols-3 gap-2 px-4 mt-4">
+            <div className="grid grid-cols-1 md:grid-cols-3 gap-3 px-4 mt-4">
                 <div className="card bg-base-100 w-full shadow-sm text-center">
                     <div className="card-body">
                         <h2 className="text-xl font-bold text-center">Active Recall</h2>

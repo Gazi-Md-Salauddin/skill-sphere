@@ -1,6 +1,7 @@
 import React from "react";
 import Image from "next/image";
 import Hero from "@/assets/hero.png";
+import Link from 'next/link'
 
 const Banner = () => {
     return (
@@ -16,9 +17,9 @@ const Banner = () => {
                     material that help your knowledge growing.
                 </p>
                 <div className="flex gap-3">
-                    <button className="btn bg-purple-500 text-white">
+                    <Link href="/courses" className="btn bg-purple-500 text-white">
                         Get Started
-                    </button>
+                    </Link>
                     <button className="btn bg-purple-200 text-purple-500">
                         Get Free Trial
                     </button>

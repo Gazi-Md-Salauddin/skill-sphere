@@ -11,12 +11,12 @@ import Image from "next/image";
 const Footer = () => {
     return (
         <footer className="relative mt-24">
-            <div className="mt-12 h-px w-full bg-[#060e85]">
+            <div className="mt-12 h-px w-full bg-[#060b39]">
                 {/* Background Layer */}
                 <div className="absolute inset-0 -z-10" />
 
                 {/* Content */}
-                <div className="max-w-7xl mx-auto px-6 py-16 bg-[#060e85]">
+                <div className="max-w-7xl mx-auto px-6 py-16 bg-[#060b39]">
                     {/* Top Grid */}
                     <div className="grid grid-cols-1 text-center md:grid-cols-3 gap-12">
                         {/* Brand */}

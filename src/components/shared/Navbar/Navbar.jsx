@@ -77,6 +77,7 @@ const Navbar = () => {
                                             alt="User"
                                             width={20}
                                             height={20}
+                                            className="w-16 h-16 rounded-full"
                                             referrerPolicy="no-referrer"
                                         />
                                     </div>
@@ -115,11 +116,7 @@ const Navbar = () => {
 
             {/*Search*/}
             <div className="pr-4 md:flex justify-between gap-2">
-                <input
-                    type="text"
-                    placeholder="Search"
-                    className="input input-bordered w-24 md:w-auto"
-                />
+                
                 <div>
                     {!user && (
                         <ul className="hidden md:flex gap-2 md:pr-4">
