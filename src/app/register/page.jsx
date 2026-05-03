@@ -51,7 +51,7 @@ const RegisterPage = () => {
             <label className="label">Image URL</label>
             <input
                 className="input"
-                required
+               
                 name="image"
                 type="text"
                 placeholder="Image URL"

@@ -1,0 +1,33 @@
+import React from "react";
+
+const LearningTips = () => {
+    return (
+        <div className="px-4 mt-4">
+            <div>
+                <h2 className="text-2xl font-bold">Learning Tips</h2>
+            </div>
+            <div className="grid grid-cols-1 md:grid-cols-3 gap-2 px-4 mt-4">
+                <div className="card bg-base-100 w-full shadow-sm text-center">
+                    <div className="card-body">
+                        <h2 className="text-xl font-bold text-center">Active Recall</h2>
+                        <p>Test yourself instead of only rereading.</p>
+                    </div>
+                </div>
+                <div className="card bg-base-100 w-full shadow-sm text-center">
+                    <div className="card-body text-center">
+                        <h2 className="text-xl font-bold">Pomodoro</h2>
+                        <p>Study in focused short sessions.</p>
+                    </div>
+                </div>
+                <div className="card bg-base-100 w-full shadow-sm text-center">
+                    <div className="card-body text-center">
+                        <h2 className="text-xl font-bold">Notes Review</h2>
+                        <p>Revise key points every day.</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    );
+};
+
+export default LearningTips;

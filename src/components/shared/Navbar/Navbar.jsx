@@ -6,7 +6,7 @@ import Image from "next/image";
 
 const Navbar = () => {
     const userData = authClient.useSession();
-    const user = userData.data?.user;
+    const user = userData?.data?.user;
 
     const handleLogout = async () => {
         await authClient.signOut();
@@ -69,12 +69,21 @@ const Navbar = () => {
                             <div className="flex gap-2">
                                 <div className="avatar avatar-placeholder">
                                     <div className="bg-neutral text-neutral-content w-8 rounded-full">
-                                        <p>Profile</p>
+                                        <Image
+                                            src={
+                                                user?.image ||
+                                                "/default-user.png"
+                                            }
+                                            alt="User"
+                                            width={20}
+                                            height={20}
+                                            referrerPolicy="no-referrer"
+                                        />
                                     </div>
                                 </div>
                                 <button
                                     onClick={handleLogout}
-                                    className="btn btn-error text-sm"
+                                    className="btn btn-error text-sm text-white"
                                 >
                                     Logout
                                 </button>
@@ -130,14 +139,18 @@ const Navbar = () => {
                         <div className="hidden md:flex gap-3">
                             <div className="avatar avatar-placeholder">
                                 <div className="bg-neutral text-neutral-content w-8 rounded-full">
-                                    <Image src={user?.image || "/default-user.png"} alt="User" width={20} height={20} 
-                                    referrerPolicy="no-referrer"
+                                    <Image
+                                        src={user?.image || "/default-user.png"}
+                                        alt="User"
+                                        width={20}
+                                        height={20}
+                                        referrerPolicy="no-referrer"
                                     />
                                 </div>
                             </div>
                             <button
                                 onClick={handleLogout}
-                                className="btn btn-error text-sm"
+                                className="btn btn-error text-sm text-white"
                             >
                                 Logout
                             </button>

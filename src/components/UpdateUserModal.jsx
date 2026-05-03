@@ -1,7 +1,20 @@
 import React from "react";
 import { BiEdit } from "react-icons/bi";
+import { authClient } from '@/lib/auth-client'
 
 const UpdateUserModal = () => {
+  const onSubmit = async (e) => {
+    e.preventDefault();
+    const name = e.target.name.value;
+    const image = e.target.image.value;
+
+    await authClient.updateUser({
+        name,
+        image
+    })
+
+    
+  };
     return (
         <div>
             {/* You can open the modal using document.getElementById('ID').showModal() method */}
@@ -15,11 +28,11 @@ const UpdateUserModal = () => {
             </button>
             <dialog id="my_modal_3" className="modal">
                 <div className="modal-box">
-                    <form method="dialog"
+                    <form method="dialog" onSubmit={onSubmit}
                         className="fieldset bg-base-200 border-base-300 rounded-box w-full mx-auto border p-4 my-6"
                         
                     >
-                        <h2 className="fieldset-legend text-2xl font-bold">
+                        <h2 className="flex gap-2 text-2xl font-bold">
                             <BiEdit/>Update User
                         </h2>
 
@@ -39,10 +52,14 @@ const UpdateUserModal = () => {
                             placeholder="Image URL"
                         />
 
-                        <button className="btn bg-purple-500 text-white mt-4">
+                        <button onClick={() =>
+                    document.getElementById("my_modal_3").close()
+                } type="submit" className="btn bg-purple-500 text-white mt-4">
                             Save
                         </button>
-                        <button className="btn btn-sm btn-circle btn-ghost absolute right-2 top-2">✕</button>
+                        <button onClick={() =>
+                    document.getElementById("my_modal_3").close()
+                } className="btn btn-sm btn-circle btn-ghost absolute right-2 top-2">✕</button>
                     </form>
                 </div>
             </dialog>

@@ -55,7 +55,7 @@ const LoginPage = () => {
 
             <button className="btn bg-purple-500 text-white mt-4">Login</button>
             <p className="text-center my-6">OR</p>
-            <button onClick={handleGoogleLogin} className="btn btn-outline"><FaGoogle />Login with Google</button>
+            <button onClick={handleGoogleLogin} className="btn btn-outline" type="button"><FaGoogle />Login with Google</button>
             <p className="flex gap-2 text-center justify-center my-4">Create New Account<Link href={"/register"} className="text-blue-500">Register</Link></p>
         </form>
     );
