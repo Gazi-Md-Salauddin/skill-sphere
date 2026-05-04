@@ -2,8 +2,11 @@
 import React from "react";
 import { authClient } from "@/lib/auth-client";
 import { useRouter } from "next/navigation";
+import { toast } from 'react-toastify';
 
 const RegisterPage = () => {
+  const router = useRouter();
+  
     const onSubmit = async e => {
         e.preventDefault();
 
@@ -17,13 +20,14 @@ const RegisterPage = () => {
             email,
             image,
             password,
-            callbackURL: "/login"
+            
         });
         if (error) {
-            alert(error.message);
+            toast.error(error.message || "Somthing went wrong");
         }
         if (data) {
-            alert("Successfully Register");
+            toast.success("Successfully Register");
+            router.push("/login");
         }
     };
     return (
