@@ -1,5 +1,7 @@
+"use client"
 import React from "react";
 import { IoMdStarOutline } from "react-icons/io";
+import { motion } from "framer-motion";
 
 const instructors = [
     {
@@ -27,7 +29,10 @@ const instructors = [
 
 const TopInstructor = () => {
     return (
-        <div className="px-4 mt-10">
+        <motion.div initial={{ opacity: 0, y: 40 }}
+        whileInView={{ opacity: 1, y: 0 }}
+                    transition={{ duration: 0.6 }}
+                    viewport={{ once: false, amount: 0.3 }} className="px-4 mt-10">
             <div>
                 <h2 className="text-2xl font-bold">Top Instructors</h2>
             </div>
@@ -56,7 +61,7 @@ const TopInstructor = () => {
                     </div>
                 ))}
             </div>
-        </div>
+        </motion.div>
     );
 };
 

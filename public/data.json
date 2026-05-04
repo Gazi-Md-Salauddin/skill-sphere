@@ -45,17 +45,6 @@
   },
   {
     "id": 5,
-    "title": "Python for Data Science",
-    "instructor": "Jose Portilla",
-    "duration": "22 hours",
-    "rating": 4.9,
-    "level": "Intermediate",
-    "description": "Analyze data, visualize insights, and build ML models with Python.",
-    "image": "https://images.unsplash.com/photo-1515879218367-8466d910aaa4",
-    "category": "Data Science"
-  },
-  {
-    "id": 6,
     "title": "Mobile App Development with Flutter",
     "instructor": "Academind",
     "duration": "17 hours",
@@ -64,5 +53,60 @@
     "description": "Build cross-platform mobile apps using Flutter and Dart.",
     "image": "https://images.unsplash.com/photo-1551650975-87deedd944c3",
     "category": "Development"
+  },
+  {
+    "id": 6,
+    "title": "Advanced JavaScript Concepts",
+    "instructor": "Andrei Neagoie",
+    "duration": "16 hours",
+    "rating": 4.8,
+    "level": "Advanced",
+    "description": "Deep dive into closures, prototypes, async JS, and performance optimization.",
+    "image": "https://images.unsplash.com/photo-1526378722484-cc5c5103c5c1",
+    "category": "Development"
+  },
+  {
+    "id": 7,
+    "title": "Node.js API Development",
+    "instructor": "Maximilian Schwarzmüller",
+    "duration": "14 hours",
+    "rating": 4.7,
+    "level": "Intermediate",
+    "description": "Build scalable REST APIs using Node.js, Express, and MongoDB.",
+    "image": "https://images.unsplash.com/photo-1555066931-4365d14bab8c",
+    "category": "Development"
+  },
+  {
+    "id": 8,
+    "title": "Graphic Design Masterclass",
+    "instructor": "Lindsay Marsh",
+    "duration": "19 hours",
+    "rating": 4.6,
+    "level": "Beginner",
+    "description": "Learn Photoshop, Illustrator, and design principles from scratch.",
+    "image": "https://images.unsplash.com/photo-1522199710521-72d69614c702",
+    "category": "Design"
+  },
+  {
+    "id": 9,
+    "title": "Full-Stack Next.js Course",
+    "instructor": "Lee Robinson",
+    "duration": "13 hours",
+    "rating": 4.8,
+    "level": "Intermediate",
+    "description": "Learn Next.js with server-side rendering and API routes.",
+    "image": "https://images.unsplash.com/photo-1518770660439-4636190af475",
+    "category": "Development"
+  },
+  {
+    "id": 10,
+    "title": "Figma UI Design Course",
+    "instructor": "DesignCourse",
+    "duration": "11 hours",
+    "rating": 4.7,
+    "level": "Beginner",
+    "description": "Design modern UI/UX using Figma from beginner to advanced.",
+    "image": "https://images.unsplash.com/photo-1586717791821-3f44a563fa4c",
+    "category": "Design"
   }
 ]

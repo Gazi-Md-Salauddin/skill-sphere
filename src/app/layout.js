@@ -4,6 +4,7 @@ import Navbar from '@/components/shared/Navbar/Navbar';
 import Footer from '@/components/shared/Footer/Footer';
 import { ToastContainer } from 'react-toastify';
 
+
 const geistSans = Geist({
   variable: "--font-geist-sans",
   subsets: ["latin"],
