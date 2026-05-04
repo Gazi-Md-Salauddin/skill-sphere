@@ -4,7 +4,7 @@ import LearningTips from '@/components/homepage/ui/LearningTips';
 import TopInstructor from '@/components/homepage/ui/TopInstructor';
 import TopCourses from '@/components/homepage/ui/TopCourses';
 import StatCard from '@/components/homepage/ui/StatCard';
-
+import TrendingCourses from '@/components/homepage/ui/TrendingCourses'
 
 export default function Home() {
   return (
@@ -14,7 +14,7 @@ export default function Home() {
       <StatCard/>
       <LearningTips/>
       <TopInstructor/>
-      
+      <TrendingCourses/>
     </div>
   );
 }

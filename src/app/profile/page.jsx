@@ -16,7 +16,9 @@ const ProfilePage = () => {
     }
 
     return (
-        <div className="card bg-base-100 w-full shadow-sm mt-6 px-4">
+      <div className="px-4">
+        
+        <div className="card border border-gray-200 bg-base-100 w-full shadow-sm mt-6">
             <figure className="px-10 pt-10">
                 {user?.image ? (
                     <img
@@ -36,13 +38,14 @@ const ProfilePage = () => {
             </figure>
             <div className="card-body items-center text-center">
                 <h2 className="card-title text-2xl font-bold">{user.name}</h2>
-                <p>E-mail: {user.email}</p>
+                <p className="mb-4">E-mail: {user.email}</p>
 
                 <div className="card-actions">
                     <UpdateUserModal />
                 </div>
             </div>
         </div>
+      </div>
     );
 };
 

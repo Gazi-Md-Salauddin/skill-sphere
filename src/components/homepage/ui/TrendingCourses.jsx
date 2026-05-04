@@ -13,7 +13,7 @@ const TrendingCourses = async () => {
                 <h1 className="text-2xl font-bold">Trending Courses</h1>
             </div>
             {trendingcourses.map(course => (
-                <div className="card bg-base-100 w-full shadow-sm mx-auto">
+                <div key={course.id} className="card bg-base-100 w-full shadow-sm mx-auto">
                     <figure>
                         <img src={course.image} alt={course.title} />
                     </figure>
