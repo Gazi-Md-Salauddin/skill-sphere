@@ -2,7 +2,7 @@ import React from "react";
 import CourseCard from "@/components/homepage/ui/CourseCard";
 import SearchField from "@/components/SearchField";
 import { getCourses } from "@/lib/course";
-import NotFoundCourse from '@/components/NotFoundCourse'
+import NotFoundCourse from "@/components/NotFoundCourse";
 
 const CoursesPage = async ({ searchParams }) => {
     // const res = await fetch("https://skill-sphere-virid.vercel.app/data.json");
@@ -13,7 +13,12 @@ const CoursesPage = async ({ searchParams }) => {
 
     return (
         <div className="my-6">
-            <h2 className="text-xl font-bold text-center mb-6">All Courses</h2>
+            <div className="text-center my-6">
+                <h2 className="text-2xl font-bold">
+                    All Courses
+                </h2>
+                <p>Explore All Available Courses</p>
+            </div>
             <SearchField />
 
             {courses.length === 0 ? (

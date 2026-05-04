@@ -62,7 +62,7 @@
     "rating": 4.8,
     "level": "Advanced",
     "description": "Deep dive into closures, prototypes, async JS, and performance optimization.",
-    "image": "https://images.unsplash.com/photo-1526378722484-cc5c5103c5c1",
+    "image": "https://images.unsplash.com/photo-1627398242454-45a1465c2479",
     "category": "Development"
   },
   {
@@ -84,7 +84,7 @@
     "rating": 4.6,
     "level": "Beginner",
     "description": "Learn Photoshop, Illustrator, and design principles from scratch.",
-    "image": "https://images.unsplash.com/photo-1522199710521-72d69614c702",
+    "image": "https://images.unsplash.com/photo-1581291518857-4e27b48ff24e",
     "category": "Design"
   },
   {
@@ -95,7 +95,7 @@
     "rating": 4.8,
     "level": "Intermediate",
     "description": "Learn Next.js with server-side rendering and API routes.",
-    "image": "https://images.unsplash.com/photo-1518770660439-4636190af475",
+    "image": "https://images.unsplash.com/photo-1555066931-4365d14bab8c",
     "category": "Development"
   },
   {

@@ -10,7 +10,7 @@ const ProfilePage = () => {
     if (!user) {
         return (
             <div className="text-center p-10 flex justify-center items-center">
-                <span className="loading loading-spinner text-neutral"></span>
+                <span className="loading loading-spinner text-purple-500"></span>
             </div>
         );
     }
@@ -22,7 +22,7 @@ const ProfilePage = () => {
                     <img
                         src={user?.image}
                         alt="User"
-                        className="border rounded-full"
+                        className="border border-purple-500 w-22 h-22 rounded-full"
                     />
                 ) : (
                     <div className="bg-neutral text-neutral-content flex items-center justify-center w-20 h-20 rounded-full">
@@ -35,8 +35,8 @@ const ProfilePage = () => {
                 )}
             </figure>
             <div className="card-body items-center text-center">
-                <h2 className="card-title">{user.name}</h2>
-                <p>{user.email}</p>
+                <h2 className="card-title text-2xl font-bold">{user.name}</h2>
+                <p>E-mail: {user.email}</p>
 
                 <div className="card-actions">
                     <UpdateUserModal />

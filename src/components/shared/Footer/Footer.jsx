@@ -34,18 +34,21 @@ const Footer = () => {
 
                         {/* Contacts */}
                         <div className="text-center">
-                            <h3 className="text-lg font-semibold text-white mb-4">
+                            <h3 className="text-xl font-semibold text-white mb-4">
                                 Contacts
                             </h3>
-                            <ul className="flex justify-center gap-2 space-y-3 text-lg text-white">
-                                <li>
+                            <ul className="flex-col justify-center gap-2 space-y-3 text-lg text-white text-center">
+                                <li className="flex gap-2 items-center">
                                     <TfiEmail />
+                                    <p>skillsphere12@gmail.com</p>
                                 </li>
-                                <li>
+                                <li className="flex gap-2 items-center">
                                     <IoCall/>
+                                    <p>+8801234567890</p>
                                 </li>
-                                <li>
+                                <li className="flex gap-2 items-center">
                                     <FaLocationDot/>
+                                    <p>Habiganj, Bangladesh</p>
                                 </li>
                             </ul>
                         </div>

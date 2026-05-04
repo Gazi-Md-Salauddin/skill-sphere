@@ -3,10 +3,25 @@ import React from "react";
 import Link from "next/link";
 import { authClient } from "@/lib/auth-client";
 import Image from "next/image";
+import MyNavLink from "../../homepage/ui/MyNavLink";
 
 const Navbar = () => {
     const userData = authClient.useSession();
     const user = userData?.data?.user;
+
+    const links = (
+        <>
+            <li>
+                <MyNavLink href="/">Home</MyNavLink>
+            </li>
+            <li>
+                <MyNavLink href="/courses">Courses</MyNavLink>
+            </li>
+            <li>
+                <MyNavLink href="/profile">My Profile</MyNavLink>
+            </li>
+        </>
+    );
 
     const handleLogout = async () => {
         await authClient.signOut();
@@ -41,16 +56,7 @@ const Navbar = () => {
                         tabIndex="-1"
                         className="menu menu-sm dropdown-content bg-base-100 rounded-box z-1 mt-3 w-52 p-2 shadow"
                     >
-                        <li>
-                            <Link href="/">Home</Link>
-                        </li>
-                        <li>
-                            <Link href="/courses">Courses</Link>
-                        </li>
-                        <li>
-                            <Link href="/profile">My Profile</Link>
-                        </li>
-
+                        {links}
                         {!user && (
                             <ul className="flex gap-2 pr-4">
                                 <li>
@@ -96,27 +102,18 @@ const Navbar = () => {
 
             {/*Logo*/}
             <div className="flex justify-center md:pl-4">
-                <a className="btn btn-ghost text-xl">SkillSphere</a>
+                <a className="btn btn-ghost text-xl text-purple-500">SkillSphere</a>
             </div>
 
             {/*Navbar for large screen*/}
             <div className="hidden md:flex justify-center">
                 <ul className="flex gap-3 items-center ml-8">
-                    <li>
-                        <Link href="/">Home</Link>
-                    </li>
-                    <li>
-                        <Link href="/courses">Courses</Link>
-                    </li>
-                    <li>
-                        <Link href="/profile">My Profile</Link>
-                    </li>
+                    {links}
                 </ul>
             </div>
 
             {/*Search*/}
             <div className="pr-4 md:flex justify-between gap-2">
-                
                 <div>
                     {!user && (
                         <ul className="hidden md:flex gap-2 md:pr-4">

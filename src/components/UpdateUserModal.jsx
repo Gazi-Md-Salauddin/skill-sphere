@@ -1,19 +1,20 @@
 import React from "react";
 import { BiEdit } from "react-icons/bi";
 import { authClient } from '@/lib/auth-client'
+import { toast } from 'react-toastify';
 
 const UpdateUserModal = () => {
   const onSubmit = async (e) => {
     e.preventDefault();
     const name = e.target.name.value;
     const image = e.target.image.value;
-
+    
+    toast.success("Update User Successfully")
+    
     await authClient.updateUser({
         name,
         image
     })
-
-    
   };
     return (
         <div>
