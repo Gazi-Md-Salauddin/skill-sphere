@@ -19,11 +19,11 @@ const LoginPage = () => {
         });
         if (error) {
           toast.error(error.message)
-            // alert("Error Login");
+            
         }
         if (data) {
           toast.success("Login Successfully")
-            // alert("Login Successfully");
+            
         }
     };
     
