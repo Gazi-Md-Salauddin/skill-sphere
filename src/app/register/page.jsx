@@ -7,7 +7,7 @@ import { toast } from 'react-toastify';
 const RegisterPage = () => {
   const router = useRouter();
   
-    const onSubmit = async e => {
+    const onSubmit = async (e) => {
         e.preventDefault();
 
         const name = e.target.name.value;
@@ -23,7 +23,7 @@ const RegisterPage = () => {
             
         });
         if (error) {
-            toast.error(error.message || "Somthing went wrong");
+            toast.error(error.message);
         }
         if (data) {
             toast.success("Successfully Register");
