@@ -30,3 +30,25 @@ The main goal of SkillSphere is to make online learning easy and accessible. Use
 - Motion 
 - Better-Auth
 - MongoDB
+
+## 📁 Folder Structure
+```text
+src/
+├── app/
+│   ├── api/
+│   ├── courses/
+│   ├── login/
+│   ├── profile/
+│   ├── register/
+│   ├── globals.css
+│   ├── layout.js
+│   ├── loading.jsx
+│   ├── not-found.jsx
+│   └── page.js
+│
+├── assets/
+├── components/
+├── lib/
+├── proxy.js
+└── .env
+```
