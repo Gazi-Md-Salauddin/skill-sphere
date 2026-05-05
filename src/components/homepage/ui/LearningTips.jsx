@@ -7,7 +7,7 @@ const LearningTips = () => {
         <motion.div initial={{ opacity: 0, y: 40 }}
         whileInView={{ opacity: 1, y: 0 }}
                     transition={{ duration: 0.6 }}
-                    viewport={{ once: false, amount: 0.3 }} className="my-6">
+                    viewport={{ once: true, amount: 0.3 }} className="my-6">
             <div className="px-4">
                 <h2 className="text-2xl font-bold">Learning Tips</h2>
             </div>
