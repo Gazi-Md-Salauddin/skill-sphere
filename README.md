@@ -1,6 +1,6 @@
 # 🎓 SkillSphere – Online Learning Platform
 ## 📌 Project Overview
-SkillsSphere is an online learning platform where users can explore and learn from various courses. It is designed to provide a smooth and user-friendly experience for learners.
+SkillSphere is an online learning platform where users can explore and learn from various courses. It is designed to provide a smooth and user-friendly experience for learners.
 ## 🌐 Live Demo
 https://skill-sphere-virid.vercel.app
 
