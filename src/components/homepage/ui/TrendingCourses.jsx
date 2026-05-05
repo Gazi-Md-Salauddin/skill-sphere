@@ -12,6 +12,7 @@ const TrendingCourses = async () => {
             <div className="flex justify-between items-center my-5 mx-4">
                 <h1 className="text-2xl font-bold">Trending Courses</h1>
             </div>
+            <div className="grid grid-cols-1 md:grid-cols-3 gap-3 px-4 mt-6">
             {trendingcourses.map(course => (
                 <div key={course.id} className="card bg-base-100 w-full shadow-sm mx-auto">
                     <figure>
@@ -39,6 +40,7 @@ const TrendingCourses = async () => {
                     </div>
                 </div>
             ))}
+            </div>
         </div>
     );
 };
