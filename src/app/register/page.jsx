@@ -2,12 +2,13 @@
 import React from "react";
 import { authClient } from "@/lib/auth-client";
 import { useRouter } from "next/navigation";
-import { toast } from 'react-toastify';
+import { toast } from "react-toastify";
+import { FaGoogle } from "react-icons/fa";
 
 const RegisterPage = () => {
-  const router = useRouter();
-  
-    const onSubmit = async (e) => {
+    const router = useRouter();
+
+    const onSubmit = async e => {
         e.preventDefault();
 
         const name = e.target.name.value;
@@ -19,8 +20,7 @@ const RegisterPage = () => {
             name,
             email,
             image,
-            password,
-            
+            password
         });
         if (error) {
             toast.error(error.message);
@@ -30,6 +30,13 @@ const RegisterPage = () => {
             router.push("/login");
         }
     };
+
+    const handleGoogleLogin = async () => {
+        await authClient.signIn.social({
+            provider: "google"
+        });
+    };
+
     return (
         <form
             className="fieldset bg-base-200 border-base-300 rounded-box w-xs mx-auto border p-4 my-6"
@@ -55,7 +62,6 @@ const RegisterPage = () => {
             <label className="label">Image URL</label>
             <input
                 className="input"
-               
                 name="image"
                 type="text"
                 placeholder="Image URL"
@@ -71,6 +77,15 @@ const RegisterPage = () => {
 
             <button className="btn bg-purple-500 text-white mt-4">
                 Register
+            </button>
+            <p className="text-center my-6">OR</p>
+            <button
+                onClick={handleGoogleLogin}
+                className="btn btn-outline"
+                type="button"
+            >
+                <FaGoogle />
+                Login with Google
             </button>
         </form>
     );
